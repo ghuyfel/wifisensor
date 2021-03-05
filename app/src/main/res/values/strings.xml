@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Wifi Sensor</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="permission_denied_message">This application requires location permission to work.</string>
+    <string name="request_permission">Request permission</string>
+    <string name="sending_wifi_readings">Sending wifi readings...\n%1$s</string>
+    <string name="permission_needed">Permission needed</string>
+    <string name="stop_readings">Stop readings</string>
+    <string name="start_readings">Start Readings</string>
+    <string name="service_started">Service started</string>
+    <string name="service_stopped">Service stopped</string>
+</resources>
