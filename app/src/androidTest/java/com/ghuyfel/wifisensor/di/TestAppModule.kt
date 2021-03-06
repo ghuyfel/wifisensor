@@ -87,5 +87,5 @@ class TestAppModule {
 
     @Provides
     @Singleton
-    fun provideSensorReceiver(sensor: Sensor, readingsHandler: ReadingsHandler): SensorBroadcastReceiver = mockk()
+    fun provideSensorReceiver(): SensorBroadcastReceiver = mockk()
 }
