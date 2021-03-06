@@ -9,12 +9,22 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.core.content.ContextCompat
 
 object WifiPermissionHelper {
-    private val permissions = arrayOf(
-        Manifest.permission.ACCESS_FINE_LOCATION,
-        Manifest.permission.ACCESS_COARSE_LOCATION,
-        Manifest.permission.CHANGE_WIFI_STATE,
-        Manifest.permission.ACCESS_WIFI_STATE
-    )
+    private val permissions = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        arrayOf(
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.CHANGE_WIFI_STATE,
+            Manifest.permission.ACCESS_WIFI_STATE,
+            Manifest.permission.ACCESS_BACKGROUND_LOCATION
+        )
+    } else {
+        arrayOf(
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.CHANGE_WIFI_STATE,
+            Manifest.permission.ACCESS_WIFI_STATE
+        )
+    }
 
     fun isPermissionGranted(context: Context) = ContextCompat.checkSelfPermission(
         context,

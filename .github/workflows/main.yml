@@ -15,9 +15,8 @@ jobs:
       - name: Instrumentation Tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 30
-          script: chmod +x ./gradlew
-                  ./gradlew connectedAndroidTest
+          api-level: 29
+          script: chmod +x gradlew && ./gradlew connectedAndroidTest
         continue-on-error: true # IMPORTANT: allow pipeline to continue to Android Test Report step
       - name: Upload Test Reports Folder
         uses: actions/upload-artifact@v2

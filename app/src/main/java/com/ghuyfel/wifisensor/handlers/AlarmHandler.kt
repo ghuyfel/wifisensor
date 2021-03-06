@@ -15,7 +15,7 @@ class AlarmHandler(private val context: Context, private val alarmManager: Alarm
             Intent(context, SensorBroadcastReceiver::class.java),
             PendingIntent.FLAG_CANCEL_CURRENT
         )
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, 5000, Constants.WIFI_SCANNING_INTERVAL, intent)
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, 0, Constants.WIFI_SCANNING_INTERVAL, intent)
     }
 
     fun stopSensorReadingService() {
