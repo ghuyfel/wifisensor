@@ -68,8 +68,6 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:2.33-beta"
     androidTestImplementation "com.google.dagger:hilt-android-testing:2.33-beta"
     kaptAndroidTest "com.google.dagger:hilt-android-compiler:2.33-beta"
-//    testImplementation "com.google.dagger:hilt-android-testing:2.33-beta"
-//    kaptTest "com.google.dagger:hilt-android-compiler:2.33-beta"
 
     //Activity
     implementation "androidx.activity:activity-ktx:$activity_version"
